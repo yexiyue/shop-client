@@ -3,32 +3,57 @@
 		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "home"
+				"navigationBarTitleText": "红尘往肆",
+        "navigationBarBackgroundColor": "#FFF",
+        /* "navigationStyle": "custom" */
+        //微信小程序自定义头部导航
+        /* "mp-weixin": {
+          "navigationStyle": "custom"
+        }, */
+        //app和h5生效
+        "app-plus": {
+          "titleNView":{
+            "buttons": [
+              {
+                "float": "left",
+                "fontSrc": "./static/iconfont.ttf",
+                "text": "\ue62f",
+                "fontSize": "20"
+              },
+              {
+                "float": "right",
+                "fontSrc": "./static/iconfont.ttf",
+                "text": "\ue86f",
+                "fontSize": "20"
+              }
+            ]
+          }
+        }
 			}
 		},
 		{
 			"path": "pages/category/index",
 			"style": {
-				"navigationBarTitleText": "category"
+				"navigationBarTitleText": "红尘往肆"
 			}
 		},
 		{
 			"path": "pages/cart/index",
 			"style": {
-				"navigationBarTitleText": "cart"
+				"navigationBarTitleText": "红尘往肆"
 			}
 		},
 		{
 			"path": "pages/my/index",
 			"style": {
-				"navigationBarTitleText": "my"
+				"navigationBarTitleText": "红尘往肆"
 			}
 		}
 	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "uni-app",
-		"navigationBarBackgroundColor": "#F8F8F8",
+		"navigationBarTitleText": "红尘往肆",
+		"navigationBarBackgroundColor": "#FFF",
 		"backgroundColor": "#F8F8F8"
 	},
 	"tabBar": {

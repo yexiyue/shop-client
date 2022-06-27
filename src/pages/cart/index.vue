@@ -1,5 +1,7 @@
 <template>
-  <div class="cart">cart</div>
+  <div class="cart">
+    
+  </div>
 </template>
 
 <script lang="ts" setup>
