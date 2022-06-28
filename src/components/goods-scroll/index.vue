@@ -1,17 +1,19 @@
 <template>
-  <view class="commodity" :style="'flex-wrap:'+wrap+';'">
-    <!-- 单个商品组件 -->
-    <view class="commodity-item" :style="{width:itemWidth}" v-for="item in commodityList" :key="item.id">
-      <image :style="{height:bigImageHeight}" :src="item.imgUrl" />
-      <view>
-        <text class="commodity-name" :style="{fontSize:nameSize}">{{item.name}}</text>
-      </view>
-      <view>
-        <text class="pprice" :style="{fontSize:ppriceSize}">￥{{item.pprice}}</text>
-        <text class="oprice" :style="{fontSize:opriceSize}">￥{{item.oprice}}</text>
-      </view>
-      <text class="discount" :style="{fontSize:discountSize}">{{item.discount}}折</text>
-    </view>
+  <view class="goods-scroll">
+    <scroll-view scroll-x>
+        <!-- 单个商品组件 -->
+        <view class="commodity-item" :style="{width:itemWidth}" v-for="item in commodityList" :key="item.id">
+          <image :style="{height:bigImageHeight}" :src="item.imgUrl" />
+          <view>
+            <text class="commodity-name" :style="{fontSize:nameSize}">{{item.name}}</text>
+          </view>
+          <view>
+            <text class="pprice" :style="{fontSize:ppriceSize}">￥{{item.pprice}}</text>
+            <text class="oprice" :style="{fontSize:opriceSize}">￥{{item.oprice}}</text>
+          </view>
+          <text class="discount" :style="{fontSize:discountSize}">{{item.discount}}折</text>
+        </view>
+      </scroll-view>
   </view>
 </template>
 
@@ -27,7 +29,6 @@ type PropsType = {
   }[];
   itemWidth?:string;
   bigImageHeight?:string;
-  wrap?:string;
   nameSize?:string;
   opriceSize?:string;
   ppriceSize?:string;
@@ -53,7 +54,23 @@ const props = withDefaults(defineProps<PropsType>(), {
     },
     {
       id:1,
+      imgUrl:'../../static/2051770.jpg',
+      name:'大的午饭不趁风使柁大的午饭不趁风使柁大的午饭不趁风使柁大的午饭不趁风使柁大的午饭不趁风使柁',
+      pprice:"211",
+      oprice:"985",
+      discount:5.2
+    },
+    {
+      id:1,
       imgUrl:'../../static/2030898.jpg',
+      name:'大的午饭不趁风使柁大的午饭不趁风使柁大的午饭不趁风使柁大的午饭不趁风使柁大的午饭不趁风使柁',
+      pprice:"211",
+      oprice:"985",
+      discount:5.2
+    },
+    {
+      id:1,
+      imgUrl:'../../static/2051770.jpg',
       name:'大的午饭不趁风使柁大的午饭不趁风使柁大的午饭不趁风使柁大的午饭不趁风使柁大的午饭不趁风使柁',
       pprice:"211",
       oprice:"985",
@@ -78,7 +95,6 @@ const props = withDefaults(defineProps<PropsType>(), {
   ],
   itemWidth:'375rpx',
   bigImageHeight:'375rpx',
-  wrap:'wrap',
   nameSize:'26rpx',
   opriceSize:'24rpx',
   ppriceSize:'28rpx',
@@ -87,11 +103,13 @@ const props = withDefaults(defineProps<PropsType>(), {
 </script>
 
 <style lang="less" scoped>
-.commodity {
-  display: flex;
-  /* flex-wrap:nowrap; */
+  scroll-view{
+    width: 100%;
+    white-space: nowrap;
+  }
   .commodity-item {
     /* width: 375rpx; */
+    display: inline-block;
     padding-bottom: 20rpx;
     text-align: center;
     image {
@@ -121,5 +139,4 @@ const props = withDefaults(defineProps<PropsType>(), {
       color: #ff3333;
     }
   }
-}
 </style>

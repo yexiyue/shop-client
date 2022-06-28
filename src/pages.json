@@ -54,7 +54,10 @@
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "红尘往肆",
 		"navigationBarBackgroundColor": "#FFF",
-		"backgroundColor": "#F8F8F8"
+		"backgroundColor": "#F8F8F8",
+    "app-plus": {
+      "scrollIndicator": "none"
+    }
 	},
 	"tabBar": {
     "color": "#333333",
